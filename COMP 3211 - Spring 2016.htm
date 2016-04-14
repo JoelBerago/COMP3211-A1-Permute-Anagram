@@ -1,0 +1,130 @@
+<!DOCTYPE html PUBLIC "-//w3c//dtd html 4.0 transitional//en">
+<html xmlns:hx="http://purl.org/NET/hinclude"><head>
+  <script src="COMP%203211%20-%20Spring%202016_files/hinclude.htm" type="text/javascript"></script>
+  <meta http-equiv="content-type" content="text/html; charset=windows-1252">
+  <title>COMP 3211 - Spring 2016</title>
+  <link rel="stylesheet" type="text/css" media="print" href="COMP%203211%20-%20Spring%202016_files/dekaiprint.css">
+  <link rel="stylesheet" type="text/css" media="screen" href="COMP%203211%20-%20Spring%202016_files/dekaisite.css">
+</head>
+
+<body lang="en">
+
+
+<div id="navigation" class="xhtml">
+<h3>HLTC</h3>
+<a href="http://www.cs.ust.hk/%7Ehltc/"><img alt="HLTC's logo symbolizes commitment to combining the best features of the traditional and the cutting edge, bridging the East and West." src="COMP%203211%20-%20Spring%202016_files/hltc_logo_cropped.jpg" width="50%"></a>
+<p></p>
+<a href="http://www.cs.ust.hk/%7Edekai/3211/">Course Home</a>
+</div>
+
+<!--
+<div id="bg">
+  <a href="http://www.ust.hk"><img alt="HKUST's ideal research environment is situated in beautiful Clear Water Bay, Hong Kong." src="hkustcampus.jpg" width="25%" /></a>
+</div>
+-->
+
+<div id="content">
+<h2>COMP 3211 Programming Assignment 1 - Spring 2016</h2>
+
+<p><b>Spring 2016, COMP 3211 Introduction to Artificial Intelligence [3-0-1:3]</b>
+<br>
+Lecture 1, MoWe 09:00-10:20, Rm 2304 at L17/18
+  <!-- To Be Discussed (temporarily Sa 10:00-12:50, Rm 5583 at
+  L29/30; originally WF 15:00-16:20, Rm 2463 at L25/26) --> <br>
+<b><a href="http://www.cs.ust.hk/%7Edekai">Prof. Dekai WU</a></b>, Rm 3539,
+2358-6989, <a href="mailto:dekai@cs.ust.hk">dekai@cs.ust.hk</a></p>
+
+<p><strong>Due:</strong> 2016.04.01 at 23:00 by CASS</p>
+
+<p><strong>Assignment page:</strong> <a href="http://www.cs.ust.hk/%7Edekai/3211/assignments/a1.html">http://www.cs.ust.hk/~dekai/3211/assignments/a1.html</a></p>
+
+
+<h3>Part 1</h3>
+
+<p>Implement a Scheme function <tt>permute</tt> to print all permutations of a
+given list of any length.</p>
+
+<p>For example:</p>
+<pre>&gt; (permute '(a e d))
+(a e d)
+(a d e)
+(e a d)
+(e d a)
+(d a e)
+(d e a)
+#f
+&gt; (permute '())
+#f
+&gt; (permute '(a))
+(a)
+#f
+&gt;</pre>
+
+<p>Notice that <tt>permute</tt> always returns <tt>#f</tt>. The permutations
+must be <em>displayed</em> to standard output, not returned. This is to avoid
+building enormous lists in memory (consider how many permutations there are of
+a list of length 10).</p>
+
+<h3>Part 2</h3>
+
+<p>Extend your Scheme function <tt>permute</tt> from Part 1, to implement a new
+  function <tt>anagram</tt> that takes an additional argument consisting of
+  a list of symbols representing legal words.  Your new function will print
+  all permutations of a given list of any length, such that appending the
+  symbols in the permuted list gives a legal word.</p>
+
+<p>For example:</p>
+<pre>&gt; (define dictionary '(a act ale at ate cat eat etc tea))
+&gt; (anagram dictionary '(a e t))
+(a t e)
+(e a t)
+(t e a)
+#f
+&gt; (anagram dictionary '(a t c))
+(a c t)
+(c a t)
+#f
+&gt; (anagram dictionary '(a))
+(a)
+#f
+&gt; (anagram '() '(a e t))
+#f
+&gt;</pre>
+
+<p>(Hint: You may wish to recall some potentially useful standard functions like <tt>symbol-&gt;string</tt>, <tt>string-&gt;symbol</tt>, <tt>string-append</tt>, etc.)</p>
+  
+<p>Notice that <tt>anagram</tt> always returns <tt>#f</tt>. The legal permutations
+must be <em>displayed</em> to standard output, not returned. This is to avoid
+building enormous lists in memory (consider how many permutations there are of
+a list of length 10).</p>
+
+<h3>Important reminders</h3>
+
+<p>Your final submitted version must run on the version of Chicken Scheme in
+Lab 2. You may only use any SRFIs that were taught in lecture.</p>
+
+<p>Place your entire assignment in one well-organized and documented file named
+<tt>a1.scm</tt>.</p>
+
+<p>Your proper <em>software engineering</em> skills are being graded. Your
+programming style (how clearly and how well you speak Scheme) is what will be
+graded. Correct functioning of your program is necessary but not sufficient!</p>
+
+<p>You must write the final version of the program on your own. Sophisticated
+plagiarism detection systems are in operation, and they are pretty good at
+catching copying! If you worked in study groups, you must also acknowledge your
+collaborators in the write-up for each problem, whether or not they are
+classmates. Other cases will be dealt with as plagiarism. Re-read the policy on
+the course home page, and note the University's tougher policy this year
+regarding cheating.</p>
+
+<br>
+
+<hr width="100%">
+<br>
+<i><a href="mailto:dekai@cs.ust.hk">dekai@cs.ust.hk</a></i> <br>
+<span class="date">Last updated: 2016.03.23</span></div>
+
+
+
+</body></html>
